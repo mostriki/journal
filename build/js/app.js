@@ -52,12 +52,17 @@ $(document).ready(function() {
     var vowel = simpleEntry.getVowel(body);
     var consonant = simpleEntry.getConsonants(body);
     var teaser = simpleEntry.getTeaser(body);
-    $('#titleCopy').append(title);
+    $('#journalEntry').append("<li><h3>" + title + "</h3></li>");
+    $('#journalEntry').append("<li><p>" + teaser + "</p></li>");
     $('#bodyCopy').append(body);
     $('#wordCount').append(count);
     $('#vowelCount').append(vowel);
     $('#consonantCount').append(consonant);
-    $('#teaser').append(teaser);
+  });
+
+  $('#journalEntry').click(function(event) {
+    event.preventDefault();
+    $('#counters').show(800);
   });
 });
 
