@@ -13,7 +13,6 @@ $(document).ready(function() {
     var teaser = simpleEntry.getTeaser(body);
     $('#titleName').append('<li><h3><span class="teaser">' + simpleEntry.title + '</span></h3></li>');
     $('#teaserName').append("<li>" + teaser + "</li>");
-    // $('#teaserTitle').show();
 
     $('.teaser').last().click(function() {
       $('#bodyCopy').text(simpleEntry.body);
